@@ -3,7 +3,7 @@ using FluentAssertions;
 using GildedRoseKata;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace GildedRoseTests.Items
+namespace GildedRoseTests.Goods
 {
     [TestClass]
     public class WhenUsingAConjuredItem
