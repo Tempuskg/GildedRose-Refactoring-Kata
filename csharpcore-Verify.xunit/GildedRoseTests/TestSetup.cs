@@ -13,4 +13,9 @@ public class TestSetup
     {
         return new Item() { Name = "Conjured Mana Cake", SellIn = 3, Quality = 6 };
     }
+
+    public static Item AnAgedBrieItem()
+    {
+        return new Item() { Name = "Aged Brie", SellIn = 3, Quality = 6 };
+    }
 }
