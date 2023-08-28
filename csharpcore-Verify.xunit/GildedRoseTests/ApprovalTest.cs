@@ -16,6 +16,7 @@ namespace GildedRoseTests
     public class ApprovalTest
     {
         [Fact]
+        [Trait("Category","Approval")]
         public Task ThirtyDays()
         {
             var fakeoutput = new StringBuilder();
