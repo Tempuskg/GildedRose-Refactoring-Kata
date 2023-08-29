@@ -25,7 +25,7 @@ namespace GildedRoseTests.Goods
         [DataRow(6,  47, -2, DisplayName = "Sellin 6 and Quality 47")]
         [DataRow(5,  47, -3, DisplayName = "Sellin 5 and Quality 47")]
         [DataRow(0,  47, 47, DisplayName = "Sellin 0 and Quality 47")]
-        public void Conjured_items_should_degrade_twice_as_fast_as_normal_items(int sellin, int quality, int expectedQualityChange)
+        public void Items_should_degrade_as_expected(int sellin, int quality, int expectedQualityChange)
         {
             var item = TestSetup.ABackStageTAFKAL80ETCItem();
             item.Quality = quality;

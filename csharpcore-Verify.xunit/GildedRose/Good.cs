@@ -11,6 +11,8 @@ namespace GildedRoseKata
         private readonly Item   _item;
         public const     string AgedBrie             = "Aged Brie";
         public const     string BackStageTAFKAL80ETC = "Backstage passes to a TAFKAL80ETC concert";
+        public const     string Sulfuras             = "Sulfuras, Hand of Ragnaros";
+        public const     string Conjured             = "Conjured Mana Cake";
 
         protected Good(Item item)
         {

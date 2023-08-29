@@ -11,16 +11,21 @@ public class TestSetup
 
     public static Item AConjuredItem()
     {
-        return new Item() { Name = "Conjured Mana Cake", SellIn = 3, Quality = 6 };
+        return new Item() { Name = Good.Conjured, SellIn = 3, Quality = 6 };
     }
 
     public static Item AnAgedBrieItem()
     {
-        return new Item() { Name = "Aged Brie", SellIn = 3, Quality = 6 };
+        return new Item() { Name = Good.AgedBrie, SellIn = 3, Quality = 6 };
     }
 
     public static Item ABackStageTAFKAL80ETCItem()
     {
-        return new Item() { Name = "Backstage passes to a TAFKAL80ETC concert", SellIn = 15, Quality = 20 };
+        return new Item() { Name = Good.BackStageTAFKAL80ETC, SellIn = 15, Quality = 20 };
+    }
+
+    public static Item ASulfurasItem()
+    {
+        return new Item() { Name = Good.Sulfuras, SellIn = 15, Quality = 20 };
     }
 }
