@@ -1,8 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using GildedRoseKata.Goods;
+﻿using GildedRoseKata.Goods;
 
 namespace GildedRoseKata
 {
@@ -30,6 +26,82 @@ namespace GildedRoseKata
             }
         }
 
-        public virtual string Name => _item.Name;
+        public virtual string Name    => _item.Name;
+        public         int    Quality
+        {
+            get => _item.Quality;
+            set => _item.Quality = value;
+        }
+
+        public int SellIn 
+        { 
+            get => _item.SellIn;
+            set => _item.SellIn = value;
+        }
+
+        public virtual void DegradeQuality()
+        {
+            if (Name != Good.BackStageTAFKAL80ETC)
+            {
+                if (Quality > 0)
+                {
+                    if (Name != Good.Sulfuras)
+                    {
+                        Quality = Quality - 1;
+                    }
+                }
+            }
+            else
+            {
+                if (Quality < 50)
+                {
+                    Quality = Quality + 1;
+
+                    if (Name == Good.BackStageTAFKAL80ETC)
+                    {
+                        if (SellIn < 11)
+                        {
+                            if (Quality < 50)
+                            {
+                                Quality = Quality + 1;
+                            }
+                        }
+
+                        if (SellIn < 6)
+                        {
+                            if (Quality < 50)
+                            {
+                                Quality = Quality + 1;
+                            }
+                        }
+                    }
+                }
+            }
+
+            if (Name != Good.Sulfuras)
+            {
+                SellIn = SellIn - 1;
+            }
+
+            if (SellIn < 0)
+            {
+                
+                    if (Name != Good.BackStageTAFKAL80ETC)
+                    {
+                        if (Quality > 0)
+                        {
+                            if (Name != Good.Sulfuras)
+                            {
+                                Quality = Quality - 1;
+                            }
+                        }
+                    }
+                    else
+                    {
+                        Quality = Quality - Quality;
+                    }
+                
+            }
+        }
     }
 }
