@@ -2,7 +2,7 @@
 
 namespace GildedRoseKata
 {
-    public abstract class Good
+    public abstract class GoodBase
     {
         private readonly Item _item;
         public const string AgedBrie = "Aged Brie";
@@ -10,12 +10,12 @@ namespace GildedRoseKata
         public const string Sulfuras = "Sulfuras, Hand of Ragnaros";
         public const string Conjured = "Conjured Mana Cake";
 
-        protected Good(Item item)
+        protected GoodBase(Item item)
         {
             _item = item;
         }
 
-        public static Good Create(Item item)
+        public static GoodBase Create(Item item)
         {
             return item.Name switch
             {

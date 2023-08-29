@@ -1,6 +1,6 @@
 ﻿namespace GildedRoseKata.Goods;
 
-public class NormalGood : Good
+public class NormalGood : GoodBase
 {
     public NormalGood(Item item) : base(item)
     {

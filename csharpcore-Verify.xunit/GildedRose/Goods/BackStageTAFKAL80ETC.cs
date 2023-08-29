@@ -1,6 +1,6 @@
 ﻿namespace GildedRoseKata.Goods;
 
-public class BackStageTAFKAL80ETC : Good
+public class BackStageTAFKAL80ETC : GoodBase
 {
     public BackStageTAFKAL80ETC(Item item) : base(item)
     {

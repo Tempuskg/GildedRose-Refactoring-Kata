@@ -1,6 +1,6 @@
 ﻿namespace GildedRoseKata.Goods;
 
-internal class AgedBrie : Good
+internal class AgedBrie : GoodBase
 {
     public AgedBrie(Item item) : base(item)
     {

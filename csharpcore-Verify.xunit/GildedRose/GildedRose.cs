@@ -15,7 +15,7 @@ namespace GildedRoseKata
         {
             for (var i = 0; i < Items.Count; i++)
             {
-                var good = Good.Create(Items[i]);
+                var good = GoodBase.Create(Items[i]);
 
                 good.DegradeQuality();
             }
