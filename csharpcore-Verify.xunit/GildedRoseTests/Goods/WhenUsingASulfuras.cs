@@ -31,11 +31,11 @@ namespace GildedRoseTests.Goods
 
         [TestMethod]
         [TestCategory("Unit")]
-        public void The_name_property_should_be_Backstage_passes_to_a_TAFKAL80ETC_concert()
+        public void The_name_property_should_be_Sulfuras_Hand_of_Ragnaros()
         {
-            var agedBrie = Good.Create(TestSetup.ABackStageTAFKAL80ETCItem());
+            var good = Good.Create(TestSetup.ASulfurasItem());
 
-            agedBrie.Name.Should().Be("Backstage passes to a TAFKAL80ETC concert");
+            good.Name.Should().Be("Sulfuras, Hand of Ragnaros");
         }
 
     }
