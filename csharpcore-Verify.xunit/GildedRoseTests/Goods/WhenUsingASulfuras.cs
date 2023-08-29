@@ -28,16 +28,5 @@ namespace GildedRoseTests.Goods
             var degradedAmount = beginningQuality - item.Quality;
             degradedAmount.Should().Be(expectedQualityChange);
         }
-
-
-        [TestMethod]
-        [TestCategory("Unit")]
-        public void The_name_property_should_be_Sulfuras_Hand_of_Ragnaros()
-        {
-            var good = Good.Create(TestSetup.ASulfurasItem());
-
-            good.Name.Should().Be("Sulfuras, Hand of Ragnaros");
-        }
-
     }
 }

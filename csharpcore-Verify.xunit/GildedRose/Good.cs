@@ -17,16 +17,15 @@ namespace GildedRoseKata
 
         public static Good Create(Item item)
         {
-            switch (item.Name)
+            return item.Name switch
             {
-                case AgedBrie: return new AgedBrie(item);
-                case BackStageTAFKAL80ETC: return new BackStageTAFKAL80ETC(item);
-                case Sulfuras: return new Sulfuras(item);
-                default: return new NullGood(item);
-            }
+                AgedBrie             => new AgedBrie(item),
+                BackStageTAFKAL80ETC => new BackStageTAFKAL80ETC(item),
+                Sulfuras             => new Sulfuras(item),
+                _                    => new NormalGood(item),
+            };
         }
 
-        public virtual string Name => _item.Name;
         public int Quality
         {
             get => _item.Quality;
@@ -39,21 +38,6 @@ namespace GildedRoseKata
             set => _item.SellIn = value;
         }
 
-        public virtual void DegradeQuality()
-        {
-            if (Quality > 0)
-            {
-                Quality--;
-            }
-
-            SellIn--;
-
-            if (SellIn >= 0) return;
-            
-            if (Quality > 0)
-            {
-                Quality--;
-            }
-        }
+        public abstract void DegradeQuality();
     }
 }

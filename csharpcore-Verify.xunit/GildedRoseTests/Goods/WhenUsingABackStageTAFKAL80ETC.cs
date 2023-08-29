@@ -40,14 +40,5 @@ namespace GildedRoseTests.Goods
             degradedAmount.Should().Be(expectedQualityChange);
         }
 
-        [TestMethod]
-        [TestCategory("Unit")]
-        public void The_name_property_should_be_Backstage_passes_to_a_TAFKAL80ETC_concert()
-        {
-            var agedBrie = Good.Create(TestSetup.ABackStageTAFKAL80ETCItem());
-
-            agedBrie.Name.Should().Be("Backstage passes to a TAFKAL80ETC concert");
-        }
-
     }
 }
