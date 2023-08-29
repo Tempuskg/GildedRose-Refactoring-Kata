@@ -8,19 +8,25 @@ public class NormalGood : GoodBase
 
     public override void DegradeQuality()
     {
-        if (Quality > 0)
+        DegradeQualityWithRate(this,DegradeRate);
+    }
+
+    public const int DegradeRate = 1;
+
+    public static void DegradeQualityWithRate(GoodBase good, int degradeRate)
+    {
+        if (good.Quality > 0)
         {
-            Quality--;
+            good.Quality -= degradeRate;
         }
 
-        SellIn--;
+        good.SellIn--;
 
-        if (SellIn >= 0) return;
+        if (good.SellIn >= 0) return;
 
-        if (Quality > 0)
+        if (good.Quality > 0)
         {
-            Quality--;
+            good.Quality -= degradeRate;
         }
-
     }
 }

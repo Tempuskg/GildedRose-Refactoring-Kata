@@ -22,6 +22,7 @@ namespace GildedRoseKata
                 AgedBrie             => new AgedBrie(item),
                 BackStageTAFKAL80ETC => new BackStageTAFKAL80ETC(item),
                 Sulfuras             => new Sulfuras(item),
+                Conjured             => new Conjured(item),
                 _                    => new NormalGood(item),
             };
         }

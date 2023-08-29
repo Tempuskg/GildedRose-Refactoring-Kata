@@ -9,7 +9,7 @@ namespace GildedRoseTests.Goods
     public class WhenUsingAConjuredItem
     {
         [TestMethod]
-        [TestCategory("Unit_NotImplemented")]
+        [TestCategory("Unit")]
         public void Conjured_items_should_degrade_twice_as_fast_as_normal_items()
         {
             var aNormalItem = TestSetup.ARegularItem();
