@@ -17,7 +17,7 @@ namespace GildedRoseKata
             {
                 var good = Good.Create(Items[i]);
 
-                if (Items[i].Name != Good.AgedBrie && Items[i].Name != Good.BackStageTAFKAL80ETC)
+                if (good.Name != Good.AgedBrie && good.Name != Good.BackStageTAFKAL80ETC)
                 {
                     if (Items[i].Quality > 0)
                     {
@@ -33,7 +33,7 @@ namespace GildedRoseKata
                     {
                         Items[i].Quality = Items[i].Quality + 1;
 
-                        if (Items[i].Name == Good.BackStageTAFKAL80ETC)
+                        if (good.Name == Good.BackStageTAFKAL80ETC)
                         {
                             if (Items[i].SellIn < 11)
                             {
@@ -61,9 +61,9 @@ namespace GildedRoseKata
 
                 if (Items[i].SellIn < 0)
                 {
-                    if (Items[i].Name != Good.AgedBrie)
+                    if (good.Name != Good.AgedBrie)
                     {
-                        if (Items[i].Name != Good.BackStageTAFKAL80ETC)
+                        if (good.Name != Good.BackStageTAFKAL80ETC)
                         {
                             if (Items[i].Quality > 0)
                             {
