@@ -1,4 +1,4 @@
-﻿namespace GildedRoseKata;
+﻿namespace GildedRoseKata.Goods;
 
 internal class AgedBrie : Good
 {
