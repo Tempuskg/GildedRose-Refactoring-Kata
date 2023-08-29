@@ -12,8 +12,9 @@ namespace GildedRoseKata
         {
             switch (item.Name)
             {
-                case "Aged Brie": return new AgedBrie(item);
-                default: return new GoodNullable(item);
+                case "Aged Brie":                                 return new AgedBrie(item);
+                case "Backstage passes to a TAFKAL80ETC concert": return new BackStageTAFKAL80ETC(item);
+                default:                                          return new GoodNullable(item);
             }
         }
 
