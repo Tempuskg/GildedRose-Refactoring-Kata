@@ -2,12 +2,7 @@
 
 internal class AgedBrie : Good
 {
-    private readonly Item _item;
-
-    public AgedBrie(Item item)
+    public AgedBrie(Item item) : base(item)
     {
-        _item = item;
     }
-
-    public override string Name => _item.Name;
 }

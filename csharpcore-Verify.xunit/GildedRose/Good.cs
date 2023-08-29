@@ -8,8 +8,14 @@ namespace GildedRoseKata
 {
     public abstract class Good
     {
-        public const string AgedBrie             = "Aged Brie";
-        public const string BackStageTAFKAL80ETC = "Backstage passes to a TAFKAL80ETC concert";
+        private readonly Item   _item;
+        public const     string AgedBrie             = "Aged Brie";
+        public const     string BackStageTAFKAL80ETC = "Backstage passes to a TAFKAL80ETC concert";
+
+        protected Good(Item item)
+        {
+            _item = item;
+        }
 
         public static Good Create(Item item)
         {
@@ -21,6 +27,6 @@ namespace GildedRoseKata
             }
         }
 
-        public abstract string Name { get ; }
+        public virtual string Name => _item.Name;
     }
 }
