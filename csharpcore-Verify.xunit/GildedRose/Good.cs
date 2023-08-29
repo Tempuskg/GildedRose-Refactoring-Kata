@@ -41,8 +41,6 @@ namespace GildedRoseKata
 
         public virtual void DegradeQuality()
         {
-            if (Name != Good.BackStageTAFKAL80ETC)
-            {
                 if (Quality > 0)
                 {
                     if (Name != Good.Sulfuras)
@@ -50,58 +48,24 @@ namespace GildedRoseKata
                         Quality = Quality - 1;
                     }
                 }
-            }
-            else
-            {
-                if (Quality < 50)
+
+                if (Name != Good.Sulfuras)
                 {
-                    Quality = Quality + 1;
-
-                    if (Name == Good.BackStageTAFKAL80ETC)
-                    {
-                        if (SellIn < 11)
-                        {
-                            if (Quality < 50)
-                            {
-                                Quality = Quality + 1;
-                            }
-                        }
-
-                        if (SellIn < 6)
-                        {
-                            if (Quality < 50)
-                            {
-                                Quality = Quality + 1;
-                            }
-                        }
-                    }
+                    SellIn = SellIn - 1;
                 }
-            }
 
-            if (Name != Good.Sulfuras)
-            {
-                SellIn = SellIn - 1;
-            }
-
-            if (SellIn < 0)
-            {
+                if (SellIn < 0)
+                {
                 
-                    if (Name != Good.BackStageTAFKAL80ETC)
+                    if (Quality > 0)
                     {
-                        if (Quality > 0)
+                        if (Name != Good.Sulfuras)
                         {
-                            if (Name != Good.Sulfuras)
-                            {
-                                Quality = Quality - 1;
-                            }
+                            Quality = Quality - 1;
                         }
                     }
-                    else
-                    {
-                        Quality = Quality - Quality;
-                    }
                 
-            }
+                }
         }
     }
 }
