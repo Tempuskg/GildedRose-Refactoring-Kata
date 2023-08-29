@@ -22,7 +22,7 @@ namespace GildedRoseKata
                 case AgedBrie: return new AgedBrie(item);
                 case BackStageTAFKAL80ETC: return new BackStageTAFKAL80ETC(item);
                 case Sulfuras: return new Sulfuras(item);
-                default: return new GoodNullable(item);
+                default: return new NullGood(item);
             }
         }
 
