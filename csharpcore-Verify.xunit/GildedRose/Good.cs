@@ -6,7 +6,17 @@ using System.Threading.Tasks;
 
 namespace GildedRoseKata
 {
-    internal class Good
+    public abstract class Good
     {
+        public static Good Create(Item item)
+        {
+            switch (item.Name)
+            {
+                case "Aged Brie": return new AgedBrie(item);
+                default: return null;
+            }
+        }
+
+        public abstract string Name { get ; }
     }
 }

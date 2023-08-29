@@ -6,7 +6,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace GildedRoseTests.Goods
 {
     [TestClass]
-    public class WhenUsingAnAgedBrieItem
+    public class WhenUsingAnAgedBrie
     {
         [TestMethod]
         [TestCategory("Unit")]
@@ -39,6 +39,15 @@ namespace GildedRoseTests.Goods
 
             var degradedAmount = beginningQuality - anAgedBrieItem.Quality;
             degradedAmount.Should().Be(-2);
+        }
+
+        [TestMethod]
+        [TestCategory("Unit")]
+        public void The_name_property_should_be_Aged_Brie()
+        {
+            var agedBrie = Good.Create(TestSetup.AnAgedBrieItem());
+
+            agedBrie.Name.Should().Be("Aged Brie");
         }
 
     }
